@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        // Case 1 - First-Class Object and Closure
+        function return_function(){
+            var foo = 10;
+
+            return function(num){
+                alert(foo + num);
+            };
+        }
+
+        var boo = return_function();
+        boo(20);
+
+        // Case 2 - Closure로 Private Data 만들기.
+        //        var TV = (function(){
+        //            var channel = 10,
+        //                volume = 5;
+        //
+        //            return function(){
+        //                this.get_channel = function(){
+        //                    return channel;
+        //                };
+        //
+        //                this.set_channel = function(channel_data){
+        //                    channel = channel_data;
+        //                }
+        //            };
+        //        })();
+        //
+        //        var tv = new TV();
+        //
+        //        console.log(tv.get_channel());
+        //        tv.set_channel(20);
+        //        console.log(tv.get_channel());
+        //        console.dir(tv);
+
+//        Case 3 - Closure loop 참조이슈
+//        function looper(){
+//            for(var i = 0; i < 10; i++){
+//                setTimeout(function(){
+//                    console.log(i);
+//                }, 0);
+//            }
+//        }
+//
+//        looper();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
