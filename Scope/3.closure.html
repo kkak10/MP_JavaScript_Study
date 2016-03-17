@@ -40,7 +40,34 @@
         //        console.log(tv.get_channel());
         //        console.dir(tv);
 
-//        Case 3 - Closure loop 참조이슈
+//        Case 3 - ES6 문법으로 만들기
+        // Case 1
+//        const Tv;
+//        {
+//            let name = "Jason",
+//                age = 22;
+//
+//            Tv = class {
+//                constructor(){
+//
+//                }
+//
+//                get name(){
+//                    return name;
+//                }
+//
+//                set name(n){
+//                    name = n;
+//                }
+//            };
+//        }
+
+//        let tv = new Tv();
+//
+//        tv.name = 10;
+//        alert(tv.name);
+
+//        Case 4 - Closure loop 참조이슈
 //        function looper(){
 //            for(var i = 0; i < 10; i++){
 //                setTimeout(function(){
