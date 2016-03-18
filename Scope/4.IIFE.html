@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        //ES3 ~ ES5
+        var person = (function(){
+            var age = 22, name = "Jason";
+
+            function get_name(){
+                return name;
+            }
+
+            function set_name(name_param){
+                name = name_param;
+            }
+
+            //private API
+            function alert_name(){
+                alert(name);
+            }
+
+            //Pubilc API
+            return {get_name: get_name, set_name: set_name};
+        })();
+
+        //ES6
+
+//        let person;
+//        {
+//            var age = 22, name = "Jason";
+//
+//            function get_name(){
+//                return name;
+//            }
+//
+//            function set_name(name_param){
+//                name = name_param;
+//            }
+//
+//            //private API
+//            function alert_name(){
+//                alert(name);
+//            }
+//
+//            //Pubilc API
+//            person = {get_name: get_name, set_name: set_name};
+//        }
+
+        // OR
+
+//        let person = (() => {
+//            let age = 22,
+//                name = "Jason";
+//
+//            function get_name(){
+//                return name;
+//            }
+//
+//            function set_name(name_param){
+//                name = name_param;
+//            }
+//
+//            //private API
+//            function alert_name(){
+//                alert(name);
+//            }
+//
+//            //Pubilc API
+//            return {
+//                get_name: get_name,
+//                set_name: set_name
+//            };
+//        })();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
